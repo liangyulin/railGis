@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ws_FindChainInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="ws_FindChainInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ws_FindChainInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ws_FindMileageInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="ws_FindMileageInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ws_FindMileageInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ws_FindProjectInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="ws_FindProjectInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ws_FindProjectInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ws_FindDWProjectInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="ws_FindDWProjectInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ws_FindDWProjectInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ws_FindChainInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ws_FindChainInfo" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindChainInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ws_FindChainInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindMileageInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ws_FindMileageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindMileageInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ws_FindMileageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindProjectInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ws_FindProjectInfo" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindProjectInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ws_FindProjectInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindDWProjectInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ws_FindDWProjectInfo" />
+  </wsdl:message>
+  <wsdl:message name="ws_FindDWProjectInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ws_FindDWProjectInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GisDataWebServiceSoap">
+    <wsdl:operation name="ws_FindChainInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得链表</wsdl:documentation>
+      <wsdl:input message="tns:ws_FindChainInfoSoapIn" />
+      <wsdl:output message="tns:ws_FindChainInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindMileageInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得里程表</wsdl:documentation>
+      <wsdl:input message="tns:ws_FindMileageInfoSoapIn" />
+      <wsdl:output message="tns:ws_FindMileageInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindProjectInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得工点表</wsdl:documentation>
+      <wsdl:input message="tns:ws_FindProjectInfoSoapIn" />
+      <wsdl:output message="tns:ws_FindProjectInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindDWProjectInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得单位工程表</wsdl:documentation>
+      <wsdl:input message="tns:ws_FindDWProjectInfoSoapIn" />
+      <wsdl:output message="tns:ws_FindDWProjectInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GisDataWebServiceSoap" type="tns:GisDataWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ws_FindChainInfo">
+      <soap:operation soapAction="http://tempuri.org/ws_FindChainInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindMileageInfo">
+      <soap:operation soapAction="http://tempuri.org/ws_FindMileageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindProjectInfo">
+      <soap:operation soapAction="http://tempuri.org/ws_FindProjectInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindDWProjectInfo">
+      <soap:operation soapAction="http://tempuri.org/ws_FindDWProjectInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GisDataWebServiceSoap12" type="tns:GisDataWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ws_FindChainInfo">
+      <soap12:operation soapAction="http://tempuri.org/ws_FindChainInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindMileageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ws_FindMileageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindProjectInfo">
+      <soap12:operation soapAction="http://tempuri.org/ws_FindProjectInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws_FindDWProjectInfo">
+      <soap12:operation soapAction="http://tempuri.org/ws_FindDWProjectInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GisDataWebService">
+    <wsdl:port name="GisDataWebServiceSoap" binding="tns:GisDataWebServiceSoap">
+      <soap:address location="http://124.128.9.254:8888/jqmis/webservice/GisDataWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GisDataWebServiceSoap12" binding="tns:GisDataWebServiceSoap12">
+      <soap12:address location="http://124.128.9.254:8888/jqmis/webservice/GisDataWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

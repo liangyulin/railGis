@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <DataPath>D:\GISData\</DataPath>
+  <ConnectionString>Provider=SQLOLEDB;Server=197.248.44.2,1433;Initial Catalog=MNMISDB;UID=sa;PWD=Crbc8266</ConnectionString>
+  <Project ProjectName="济青新建高铁" UserIP ="www.railmis.com/jqmis" UserName="xushiyang" ProjectLocalPath="jiqing\">
+	</Project>
+  <Project ProjectName="蒙内标轨铁路" UserIP ="197.248.44.2" UserName="xushiyang" ProjectLocalPath="mn\">
+	</Project>
+  <Project ProjectName="大西铁路" UserIP ="www.railmis.com/jqmis" UserName="xushiyang" ProjectLocalPath="daxi\">
+	</Project>
+</Configuration>

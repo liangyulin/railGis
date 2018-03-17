@@ -1,0 +1,13 @@
+D:\railgis\ModelInfo\bin\Debug\ModelInfo.dll.config
+D:\railgis\ModelInfo\bin\Debug\ModelInfo.dll
+D:\railgis\ModelInfo\bin\Debug\ModelInfo.pdb
+D:\railgis\ModelInfo\bin\Debug\Gavaghan.Geodesy.dll
+D:\railgis\ModelInfo\bin\Debug\DXMIS_lib_public.dll
+D:\railgis\ModelInfo\bin\Debug\Newtonsoft.Json.dll
+D:\railgis\ModelInfo\bin\Debug\AspNetPager.dll
+D:\railgis\ModelInfo\bin\Debug\Gavaghan.Geodesy.pdb
+D:\railgis\ModelInfo\bin\Debug\lib_GIS.pdb
+D:\railgis\ModelInfo\bin\Debug\DXMIS_lib_public.pdb
+D:\railgis\ModelInfo\obj\Debug\ModelInfo.csprojResolveAssemblyReference.cache
+D:\railgis\ModelInfo\obj\Debug\ModelInfo.dll
+D:\railgis\ModelInfo\obj\Debug\ModelInfo.pdb

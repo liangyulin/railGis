@@ -1,0 +1,36 @@
+﻿线程 0x34cc 已退出，返回值为 259 (0x103)。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“D:\jq\RailwayGIS\RailwayGIS\bin\Debug\RailwayGIS.exe”。已加载符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll”。无法查找或打开 PDB 文件。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“D:\jq\RailwayGIS\RailwayGIS\bin\Debug\Interop.TerraExplorerX.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“D:\jq\RailwayGIS\RailwayGIS\bin\Debug\AxInterop.TerraExplorerX.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“D:\jq\RailwayGIS\RailwayGIS\bin\Debug\GMap.NET.WindowsForms.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“D:\jq\RailwayGIS\RailwayGIS\bin\Debug\GMap.NET.Core.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms.resources\v4.0_4.0.0.0_zh-Hans_b77a5c561934e089\System.Windows.Forms.resources.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Design\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Design.dll”。无法查找或打开 PDB 文件。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services.resources\v4.0_4.0.0.0_zh-Hans_b03f5f7f11d50a3a\System.Web.Services.resources.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.resources\v4.0_4.0.0.0_zh-Hans_b77a5c561934e089\System.Xml.resources.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.resources\v4.0_4.0.0.0_zh-Hans_b77a5c561934e089\System.resources.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\Users\xyn\AppData\Local\Temp\rbuizhqo.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“Microsoft.GeneratedCode”。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_zh-Hans_b77a5c561934e089\mscorlib.resources.dll”。模块已生成，不包含符号。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll”。已跳过加载符号。模块进行了优化，并且调试器选项“仅我的代码”已启用。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll”。已跳过加载符号。模块进行了优化，并且调试器选项“仅我的代码”已启用。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll”。已跳过加载符号。模块进行了优化，并且调试器选项“仅我的代码”已启用。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll”。已跳过加载符号。模块进行了优化，并且调试器选项“仅我的代码”已启用。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\Users\xyn\AppData\Local\GMap.NET\DllCache\SQLite_v84_NET4_x86\System.Data.SQLite.dll”。无法查找或打开 PDB 文件。
+SQLiteVersion: 3.7.15.2 | 2013-01-09 11:53:05 c0e09560d26f0a6456be9dd3447f5311eb4f238f | INTEROP_CODEC INTEROP_EXTENSION_FUNCTIONS NET_40 PRELOAD_NATIVE_LIBRARY THROW_ON_DISPOSED TRACE TRACE_PRELOAD TRACE_WARNING
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\Program Files (x86)\Skyline\TerraExplorer Pro\TBPlugsWrapper.dll”。无法查找或打开 PDB 文件。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\WinSxS\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.9177_none_5093cc7abcb795e9\msvcm90.dll”。无法查找或打开 PDB 文件。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\Program Files (x86)\Skyline\TerraExplorer Pro\catalog.dll”。无法查找或打开 PDB 文件。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll”。无法查找或打开 PDB 文件。
+“RailwayGIS.vshost.exe”(CLR v4.0.30319: RailwayGIS.vshost.exe):  已加载“C:\Program Files (x86)\Skyline\TerraExplorer Pro\log4net.dll”。模块已生成，不包含符号。
+线程 0x608 已退出，返回值为 259 (0x103)。
+线程 0x24b0 已退出，返回值为 259 (0x103)。
+线程 0x26e4 已退出，返回值为 259 (0x103)。
+线程 0x3030 已退出，返回值为 259 (0x103)。
+线程 0x14f4 已退出，返回值为 259 (0x103)。
+线程 0x1b8c 已退出，返回值为 259 (0x103)。
+线程 0xdc 已退出，返回值为 259 (0x103)。
+线程 0x2ca8 已退出，返回值为 259 (0x103)。
+线程 0x361c 已退出，返回值为 259 (0x103)。
+程序“[9804] RailwayGIS.vshost.exe”已退出，返回值为 0 (0x0)。

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckUsrLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usracc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usrpwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsrLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckUsrLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsrLoginEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usracc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usrpwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsrLoginExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckUsrLoginExResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UsrInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UsrId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsrName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsrName_EN_US" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirmId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HelloWorld">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="contents" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MySoapHeader" type="tns:MySoapHeader" />
+      <s:complexType name="MySoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckUsrLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUsrLogin" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsrLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUsrLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsrLoginExSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUsrLoginEx" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsrLoginExSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUsrLoginExResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="UsrLoginSoap">
+    <wsdl:operation name="CheckUsrLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">验证用户登录信息是否正确</wsdl:documentation>
+      <wsdl:input message="tns:CheckUsrLoginSoapIn" />
+      <wsdl:output message="tns:CheckUsrLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsrLoginEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">验证用户登录信息是否正确,并返回用户信息</wsdl:documentation>
+      <wsdl:input message="tns:CheckUsrLoginExSoapIn" />
+      <wsdl:output message="tns:CheckUsrLoginExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">加入了身份验证的web服务</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UsrLoginSoap" type="tns:UsrLoginSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckUsrLogin">
+      <soap:operation soapAction="http://tempuri.org/CheckUsrLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsrLoginEx">
+      <soap:operation soapAction="http://tempuri.org/CheckUsrLoginEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:HelloWorldMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UsrLoginSoap12" type="tns:UsrLoginSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckUsrLogin">
+      <soap12:operation soapAction="http://tempuri.org/CheckUsrLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsrLoginEx">
+      <soap12:operation soapAction="http://tempuri.org/CheckUsrLoginEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:HelloWorldMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsrLogin">
+    <wsdl:port name="UsrLoginSoap" binding="tns:UsrLoginSoap">
+      <soap:address location="http://124.128.9.254:8888/jqmis/webservice/UsrLogin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UsrLoginSoap12" binding="tns:UsrLoginSoap12">
+      <soap12:address location="http://124.128.9.254:8888/jqmis/webservice/UsrLogin.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

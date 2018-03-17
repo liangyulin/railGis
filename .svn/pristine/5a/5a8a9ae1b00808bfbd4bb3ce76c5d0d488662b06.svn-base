@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="ConnectionString" value="Data Source=LENOVO-PC\MSSQL;Initial Catalog=JQMISDB;User Id=sa;Password=sa;" />
+    <add key="ConnectionStringLocal" value="Provider=Microsoft.Jet.OleDb.4.0; Data Source=D:\GISData\DB_MN.mdb" />
+    <add key="DataPath" value="D:\GISData\" />
+    <add key="ProjectPath" value="MN\Default.fly" />
+    <add key="TrainPath" value="Common\train\train.3ds" />
+    <add key="TexturePath" value="Common\Textures\" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  </appSettings>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Data.SQLite" publicKeyToken="db937bc2d44ff139" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-1.0.65.0" newVersion="1.0.65.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="UsrLoginSoap" maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647" />
+        <binding name="GisDataWebServiceSoap" maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://124.128.9.254:8888/jqmis/webservice/UsrLogin.asmx" binding="basicHttpBinding" bindingConfiguration="UsrLoginSoap" contract="UsrLogin.UsrLoginSoap" name="UsrLoginSoap" />
+      <endpoint address="http://124.128.9.254:8888/jqmis/webservice/GisDataWebService.asmx" binding="basicHttpBinding" bindingConfiguration="GisDataWebServiceSoap" contract="WS_GISServerData.GisDataWebServiceSoap" name="GisDataWebServiceSoap" />
+    </client>
+  </system.serviceModel>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

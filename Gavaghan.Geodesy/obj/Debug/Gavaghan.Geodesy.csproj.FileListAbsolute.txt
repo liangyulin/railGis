@@ -1,0 +1,5 @@
+D:\railgis\Gavaghan.Geodesy\bin\Debug\Gavaghan.Geodesy.dll
+D:\railgis\Gavaghan.Geodesy\bin\Debug\Gavaghan.Geodesy.pdb
+D:\railgis\Gavaghan.Geodesy\obj\Debug\Gavaghan.Geodesy.csprojResolveAssemblyReference.cache
+D:\railgis\Gavaghan.Geodesy\obj\Debug\Gavaghan.Geodesy.dll
+D:\railgis\Gavaghan.Geodesy\obj\Debug\Gavaghan.Geodesy.pdb

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayGIS", "RailwayGIS\RailwayGIS.csproj", "{0A1AA97A-615E-49F6-89E6-73773CFA0892}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B} = {1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GISUtilities", "GISUtilities\GISUtilities.csproj", "{5ABEBFF6-424E-40A1-981F-B28D2FDE6475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelInfo", "ModelInfo\ModelInfo.csproj", "{1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FEF5CAD3-7F38-4801-849E-2F4F94607ABD} = {FEF5CAD3-7F38-4801-849E-2F4F94607ABD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gavaghan.Geodesy", "Gavaghan.Geodesy\Gavaghan.Geodesy.csproj", "{FEF5CAD3-7F38-4801-849E-2F4F94607ABD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A1AA97A-615E-49F6-89E6-73773CFA0892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1AA97A-615E-49F6-89E6-73773CFA0892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1AA97A-615E-49F6-89E6-73773CFA0892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1AA97A-615E-49F6-89E6-73773CFA0892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABEBFF6-424E-40A1-981F-B28D2FDE6475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABEBFF6-424E-40A1-981F-B28D2FDE6475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABEBFF6-424E-40A1-981F-B28D2FDE6475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABEBFF6-424E-40A1-981F-B28D2FDE6475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1607E5DB-A879-4AB4-BAB6-5BF5A1AB812B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF5CAD3-7F38-4801-849E-2F4F94607ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF5CAD3-7F38-4801-849E-2F4F94607ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF5CAD3-7F38-4801-849E-2F4F94607ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF5CAD3-7F38-4801-849E-2F4F94607ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

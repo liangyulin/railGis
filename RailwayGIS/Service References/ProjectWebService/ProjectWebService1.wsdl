@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FindChangedProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProjectResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Project_B_DW_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Project_B_DW_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_A_DX_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProfessionalID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mileage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectLength" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFinish" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectConsLogInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LogID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectDivisionCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CrtUSrID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignUsrIDs" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssignAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_B_DW_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_C_FB_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_D_FX_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_E_JYP_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Details" type="tns:ArrayOfProjectConsLogDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectConsLogDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectConsLogDetail" nillable="true" type="tns:ProjectConsLogDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectConsLogDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LogDetailID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UsrID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirmID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TradeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FpId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:Status" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Status">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="Deleted" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="EmployeeAssignInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssignID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TradeID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UsrID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CrtUSrID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Fingerprint">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FpId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnrollId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UsrId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsrName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FpNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FpChar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FpChar2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateUsrId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirmId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Project_E_JYP_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Project_E_JYP_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_D_FX_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Project_D_FX_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Project_D_FX_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Project_C_FB_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Scale" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Project_C_FB_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Project_C_FB_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProfessionalID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProfessionalID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectName_en_us" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectLenth" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude_Start" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude_Start" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Altitude_Start" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude_Mid" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude_Mid" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Altitude_Mid" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude_End" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude_End" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Altitude_End" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mileage_Start_Des" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mileage_End_Des" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mileage_Mid_Des" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mileage_Start" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mileage_Mid" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mileage_End" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirmID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFinish" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="Direction" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentProjectID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MileagePrefix" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectInfo" nillable="true" type="tns:ProjectInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProject_C_FB_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Project_C_FB_Info" nillable="true" type="tns:Project_C_FB_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProject_D_FX_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Project_D_FX_Info" nillable="true" type="tns:Project_D_FX_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProject_E_JYP_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Project_E_JYP_Info" nillable="true" type="tns:Project_E_JYP_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFingerprint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Fingerprint" nillable="true" type="tns:Fingerprint" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEmployeeAssignInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeAssignInfo" nillable="true" type="tns:EmployeeAssignInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectConsLogInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectConsLogInfo" nillable="true" type="tns:ProjectConsLogInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProject_B_DW_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Project_B_DW_Info" nillable="true" type="tns:Project_B_DW_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BasicAuthSoapHeader" type="tns:BasicAuthSoapHeader" />
+      <s:complexType name="BasicAuthSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UsrID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsrAcc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsrPWD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeviceID" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="FindChangedProject_B_DW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_B_DWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProject_B_DWResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_C_FB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_C_FBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProject_C_FBResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_D_FX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_D_FXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProject_D_FXResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_E_JYP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProject_E_JYPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProject_E_JYPResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedFingerprints">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedFingerprintsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedFingerprintsResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedEmployeeAssignInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedEmployeeAssignInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedEmployeeAssignInfoResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProjectConsLogInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProjectConsLogInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProjectConsLogInfoResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProjectConsLogDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChangedProjectConsLogDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChangedProjectConsLogDetailResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveProjectConsLogInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoOfJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveProjectConsLogInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveProjectConsLogInfoResult" type="tns:ResponseVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FindChangedProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProject" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_B_DWSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_B_DW" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_B_DWSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_B_DWResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_B_DWBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_C_FBSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_C_FB" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_C_FBSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_C_FBResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_C_FBBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_D_FXSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_D_FX" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_D_FXSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_D_FXResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_D_FXBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_E_JYPSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_E_JYP" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_E_JYPSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProject_E_JYPResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProject_E_JYPBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedFingerprintsSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedFingerprints" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedFingerprintsSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedFingerprintsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedFingerprintsBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedEmployeeAssignInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedEmployeeAssignInfo" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedEmployeeAssignInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedEmployeeAssignInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedEmployeeAssignInfoBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectConsLogInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProjectConsLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectConsLogInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProjectConsLogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectConsLogInfoBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectConsLogDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChangedProjectConsLogDetail" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectConsLogDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChangedProjectConsLogDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChangedProjectConsLogDetailBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectConsLogInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveProjectConsLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectConsLogInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveProjectConsLogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectConsLogInfoBasicAuthSoapHeader">
+    <wsdl:part name="BasicAuthSoapHeader" element="tns:BasicAuthSoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="ProjectWebServiceSoap">
+    <wsdl:operation name="FindChangedProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取工点信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProjectSoapIn" />
+      <wsdl:output message="tns:FindChangedProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_B_DW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取单位工程信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProject_B_DWSoapIn" />
+      <wsdl:output message="tns:FindChangedProject_B_DWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_C_FB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取分部工程信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProject_C_FBSoapIn" />
+      <wsdl:output message="tns:FindChangedProject_C_FBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_D_FX">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取分项工程信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProject_D_FXSoapIn" />
+      <wsdl:output message="tns:FindChangedProject_D_FXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_E_JYP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取检验批信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProject_E_JYPSoapIn" />
+      <wsdl:output message="tns:FindChangedProject_E_JYPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedFingerprints">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取实名制模块被授予的用户指纹信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedFingerprintsSoapIn" />
+      <wsdl:output message="tns:FindChangedFingerprintsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedEmployeeAssignInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取用户工种信息</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedEmployeeAssignInfoSoapIn" />
+      <wsdl:output message="tns:FindChangedEmployeeAssignInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProjectConsLogInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取工单</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProjectConsLogInfoSoapIn" />
+      <wsdl:output message="tns:FindChangedProjectConsLogInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProjectConsLogDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">增量获取工单明细</wsdl:documentation>
+      <wsdl:input message="tns:FindChangedProjectConsLogDetailSoapIn" />
+      <wsdl:output message="tns:FindChangedProjectConsLogDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProjectConsLogInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">保存工单信息</wsdl:documentation>
+      <wsdl:input message="tns:SaveProjectConsLogInfoSoapIn" />
+      <wsdl:output message="tns:SaveProjectConsLogInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProjectWebServiceSoap" type="tns:ProjectWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindChangedProject">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProjectBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_B_DW">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProject_B_DW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProject_B_DWBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_C_FB">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProject_C_FB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProject_C_FBBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_D_FX">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProject_D_FX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProject_D_FXBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_E_JYP">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProject_E_JYP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProject_E_JYPBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedFingerprints">
+      <soap:operation soapAction="http://tempuri.org/FindChangedFingerprints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedFingerprintsBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedEmployeeAssignInfo">
+      <soap:operation soapAction="http://tempuri.org/FindChangedEmployeeAssignInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedEmployeeAssignInfoBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProjectConsLogInfo">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProjectConsLogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProjectConsLogInfoBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProjectConsLogDetail">
+      <soap:operation soapAction="http://tempuri.org/FindChangedProjectConsLogDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FindChangedProjectConsLogDetailBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProjectConsLogInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveProjectConsLogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveProjectConsLogInfoBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProjectWebServiceSoap12" type="tns:ProjectWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindChangedProject">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProjectBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_B_DW">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProject_B_DW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProject_B_DWBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_C_FB">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProject_C_FB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProject_C_FBBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_D_FX">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProject_D_FX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProject_D_FXBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProject_E_JYP">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProject_E_JYP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProject_E_JYPBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedFingerprints">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedFingerprints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedFingerprintsBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedEmployeeAssignInfo">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedEmployeeAssignInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedEmployeeAssignInfoBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProjectConsLogInfo">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProjectConsLogInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProjectConsLogInfoBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChangedProjectConsLogDetail">
+      <soap12:operation soapAction="http://tempuri.org/FindChangedProjectConsLogDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FindChangedProjectConsLogDetailBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProjectConsLogInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveProjectConsLogInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveProjectConsLogInfoBasicAuthSoapHeader" part="BasicAuthSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProjectWebService">
+    <wsdl:port name="ProjectWebServiceSoap" binding="tns:ProjectWebServiceSoap">
+      <soap:address location="http://124.128.9.254:8888/jqmis/webservice/ProjectWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProjectWebServiceSoap12" binding="tns:ProjectWebServiceSoap12">
+      <soap12:address location="http://124.128.9.254:8888/jqmis/webservice/ProjectWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
